@@ -69,10 +69,8 @@ const ExampleApi = () => {
           </div>
         </form>
 
-        {/* Mensagem de erro */}
         {error && <p className="text-red-500 mt-2">{error}</p>}
 
-        {/* Exibir post */}
         {post && (
           <Card className="mt-4 w-full">
             <CardHeader>

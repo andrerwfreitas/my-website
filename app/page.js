@@ -29,10 +29,15 @@ const Home = () => (
       <Text variant="h1" className="mb-2 text-center w-full">
         André R W Freitas
       </Text>
-      <Text variant="p" className="w-full text-center mb-10">
+      <Text variant="p" className="w-full text-center mb-3">
         Junior front-end developer <br /> I love tech, coding and modern web
         design
       </Text>
+      <div className="w-full flex justify-center mb-10">
+        <a href="https://github.com/andrerwfreitas" target="_blank" rel="noopener noreferrer">
+          <img src="/github-mark.svg" className="h-7" />
+        </a>
+      </div>
       <Text variant="h2" className="mb-2">
         Projects
       </Text>

@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Copy } from "lucide-react";
-import { useState } from "react"; // Importar useState
+import { useState } from "react"; 
 import PageMargin from "@/components/PageMargin";
 import Navbar from "@/components/Navbar";
 import Text from "@/components/Text";
@@ -12,12 +12,12 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Label } from "@/components/ui/label";
 
 const PasswordGenerator = () => {
-  const [length, setLength] = useState(12); // Estado para o comprimento da senha
-  const [password, setPassword] = useState(""); // Estado para a senha gerada
+  const [length, setLength] = useState(12); 
+  const [password, setPassword] = useState(""); 
 
   // Função para gerar a senha
   const generatePassword = (e) => {
-    e.preventDefault(); // Previne o envio do formulário
+    e.preventDefault(); 
 
     const characters =
       'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"?.,;:-_/89%$&€+*«»<>@';
@@ -30,14 +30,14 @@ const PasswordGenerator = () => {
       generatedPassword += randomChar;
     }
 
-    setPassword(generatedPassword); // Atualiza o estado com a senha gerada
+    setPassword(generatedPassword); 
   };
   const copyToClipboard = () => {
     navigator.clipboard
-      .writeText(password) // Copia a senha para a área de transferência
+      .writeText(password)
       .then(() => {
-        setCopied(true); // Atualiza o estado para mostrar que foi copiado
-        setTimeout(() => setCopied(false), 1000); // Faz reset ao estado
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1000); 
       })
       .catch((err) => {
         console.error("Erro ao copiar para a área de transferência", err);
@@ -61,7 +61,7 @@ const PasswordGenerator = () => {
               type="number"
               id="length"
               value={length}
-              onChange={(e) => setLength(Number(e.target.value))} // Atualiza o comprimento
+              onChange={(e) => setLength(Number(e.target.value))} 
               min="1"
               className="w-full"
             />
@@ -84,7 +84,7 @@ const PasswordGenerator = () => {
           <Button
             variant="ghost"
             className="cursor-pointer"
-            onClick={copyToClipboard} // Adiciona o evento de clique para copiar
+            onClick={copyToClipboard} 
           >
             <Copy
               size={19}
