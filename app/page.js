@@ -15,14 +15,17 @@ import Text from "@/components/Text";
 import PageMargin from "@/components/PageMargin";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CardMenu from "@/components/CardMenu";
+import Image from "next/image";
 
 const Home = () => (
   <>
     <PageMargin>
       <div className="flex justify-center">
-        <img
+        <Image
           src="/profile-picture.png"
           width={150}
+          height={150}
+          alt="André R W Freitas"
           className="shadow-sm rounded-full mb-5"
         />
       </div>
