@@ -1,11 +1,12 @@
 import Navbar from "@/components/Navbar";
 import PageMargin from "@/components/PageMargin";
+import Text from "@/components/Text";
 
 const MacOSWindow = () => (
   <>
     <Navbar />
     <PageMargin>
-      <h1 className="text-center text-2xl font-semibold w-full mb-3">MacOS terminal window with CSS</h1>
+      <Text variant="h2" className="text-center mb-3">MacOS terminal window with CSS</Text>
       <div className="shadow-lg w-full flex flex-col text-white rounded-lg bg-black h-56">
         <div className="flex items-center bg-neutral-700 h-8 px-2 relative rounded-t-lg">
           <div className="flex gap-1">
