@@ -3,6 +3,7 @@ import {
   FileText,
   KeyRound,
   Terminal,
+  Squircle
 } from "lucide-react";
 import Link from "next/link";
 import Text from "@/components/Text";
@@ -52,6 +53,11 @@ const Home = () => (
             <Link href="/password-generator">
               <TextIconCard title="Password generator">
                 <KeyRound />
+              </TextIconCard>
+            </Link>
+            <Link href="/border-radius">
+              <TextIconCard title="Border radius">
+                <Squircle />
               </TextIconCard>
             </Link>
           </CardMenu>
