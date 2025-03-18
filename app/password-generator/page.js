@@ -1,7 +1,6 @@
 "use client";
 
 import { Input } from "@/components/ui/input";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Copy } from "lucide-react";
 import { useState } from "react"; 
@@ -15,7 +14,6 @@ const PasswordGenerator = () => {
   const [length, setLength] = useState(12); 
   const [password, setPassword] = useState(""); 
 
-  // Função para gerar a senha
   const generatePassword = (e) => {
     e.preventDefault(); 
 
@@ -40,10 +38,10 @@ const PasswordGenerator = () => {
         setTimeout(() => setCopied(false), 1000); 
       })
       .catch((err) => {
-        console.error("Erro ao copiar para a área de transferência", err);
+        console.error("Error copying", err);
       });
   };
-  const [copied, setCopied] = useState(false); // Estado para saber se a senha foi copiada
+  const [copied, setCopied] = useState(false);
 
   return (
     <>

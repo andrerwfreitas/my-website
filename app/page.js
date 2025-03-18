@@ -1,14 +1,9 @@
 import TextIconCard from "@/components/TextIconCard";
 import {
-  Code,
   FileText,
-  Globe,
-  Instagram,
-  Key,
   KeyRound,
-  Link2,
-  MessageCircle,
-  Youtube,
+  Terminal,
+  Squircle
 } from "lucide-react";
 import Link from "next/link";
 import Text from "@/components/Text";
@@ -16,6 +11,7 @@ import PageMargin from "@/components/PageMargin";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CardMenu from "@/components/CardMenu";
 import Image from "next/image";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 const Home = () => (
   <>
@@ -38,16 +34,19 @@ const Home = () => (
       </Text>
       <div className="w-full flex justify-center mb-10">
         <a href="https://github.com/andrerwfreitas" target="_blank" rel="noopener noreferrer">
-          <img src="/github-mark.svg" className="h-7" />
+          <Image alt="github" src="/github-mark.svg" width={30} height={40} />
         </a>
       </div>
       <Text variant="h2" className="mb-2">
         Projects
       </Text>
       <Tabs defaultValue="utilities" className="w-full">
-        <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="utilities">Utilities</TabsTrigger>
-          <TabsTrigger value="sandbox">Sandbox</TabsTrigger>
+        <TabsList className="w-full">
+          <ScrollArea className="whitespace-nowrap overflow-y-scroll">
+            <TabsTrigger value="utilities">Utilities</TabsTrigger>
+            <TabsTrigger value="sandbox">Sandbox</TabsTrigger>
+            <ScrollBar orientation="horizontal" />
+          </ScrollArea>
         </TabsList>
         <TabsContent value="utilities">
           <CardMenu>
@@ -56,16 +55,27 @@ const Home = () => (
                 <KeyRound />
               </TextIconCard>
             </Link>
+            <Link href="/border-radius">
+              <TextIconCard title="Border radius">
+                <Squircle />
+              </TextIconCard>
+            </Link>
           </CardMenu>
         </TabsContent>
         <TabsContent value="sandbox">
           <CardMenu>
+            <Link href="/macos-terminal-window">
+              <TextIconCard title="MacOS terminal window">
+                <Terminal />
+              </TextIconCard>
+            </Link>
             <Link href={"/get-post-jsonplaceholder"}>
               <TextIconCard title="Get post from jsonplaceholder API">
                 <FileText />
               </TextIconCard>
             </Link>
           </CardMenu>
+
         </TabsContent>
       </Tabs>
     </PageMargin>
