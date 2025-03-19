@@ -1,2 +1,5 @@
 # My website
-- Built using Next.js
+## Technologies and frameworks
+- Next.js
+- Tailwind CSS
+- shadcn/ui
