@@ -1,4 +1,4 @@
-import TextIconCard from "@/components/TextIconCard";
+import Card from "@/components/Card";
 import {
   FileText,
   KeyRound,
@@ -13,6 +13,7 @@ import CardMenu from "@/components/CardMenu";
 import Image from "next/image";
 import {ScrollArea, ScrollBar} from "@/components/ui/scroll-area";
 import SkillIcon from "@/components/SkillIcon";
+import GitHubLogo from "@/components/GitHubLogo";
 
 const Skills = () => (
   <>
@@ -58,7 +59,8 @@ const Home = () => (
       </Text>
       <div className="w-full flex justify-center mb-8">
         <a href="https://github.com/andrerwfreitas" target="_blank" rel="noopener noreferrer">
-          <Image alt="github" src="/github-mark.svg" width={30} height={40}/>
+          <GitHubLogo color="white" className="h-8 w-auto hidden dark:block" />
+          <GitHubLogo color="default" className="h-8 w-auto block dark:hidden" />
         </a>
       </div>
       <div className="flex flex-col gap-7">
@@ -85,33 +87,33 @@ const Home = () => (
             <TabsContent value="utilities">
               <CardMenu>
                 <Link href="/password-generator">
-                  <TextIconCard title="Password generator">
+                  <Card title="Password generator">
                     <KeyRound/>
-                  </TextIconCard>
+                  </Card>
                 </Link>
                 <Link href="/border-radius">
-                  <TextIconCard title="Border radius">
+                  <Card title="Border radius">
                     <Squircle/>
-                  </TextIconCard>
+                  </Card>
                 </Link>
                 <Link href="/to-do">
-                  <TextIconCard title="To-do list">
+                  <Card title="To-do list">
                     <ListChecks />
-                  </TextIconCard>
+                  </Card>
                 </Link>
               </CardMenu>
             </TabsContent>
             <TabsContent value="sandbox">
               <CardMenu>
                 <Link href="/macos-terminal-window">
-                  <TextIconCard title="MacOS terminal window">
+                  <Card title="MacOS terminal window">
                     <Terminal/>
-                  </TextIconCard>
+                  </Card>
                 </Link>
                 <Link href={"/get-post-jsonplaceholder"}>
-                  <TextIconCard title="Get post from jsonplaceholder API">
+                  <Card title="Get post from jsonplaceholder API">
                     <FileText/>
-                  </TextIconCard>
+                  </Card>
                 </Link>
               </CardMenu>
 

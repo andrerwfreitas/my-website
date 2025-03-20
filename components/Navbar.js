@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Navbar = () => (
   <>
-    <div className="sticky w-full bg-white border-b flex items-center p-3 gap-3">
+    <div className="sticky w-full bg-white border-b flex items-center p-3 gap-3 dark:bg-neutral-900">
     <Link href={"/"} >
       <div className="flex items-center gap-3">
       <Image
