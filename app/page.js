@@ -13,6 +13,7 @@ import CardMenu from "@/components/CardMenu";
 import Image from "next/image";
 import {ScrollArea, ScrollBar} from "@/components/ui/scroll-area";
 import SkillIcon from "@/components/SkillIcon";
+import GitHubLogo from "@/components/GitHubLogo";
 
 const Skills = () => (
   <>
@@ -58,7 +59,8 @@ const Home = () => (
       </Text>
       <div className="w-full flex justify-center mb-8">
         <a href="https://github.com/andrerwfreitas" target="_blank" rel="noopener noreferrer">
-          <Image alt="github" src="/github-mark.svg" width={30} height={40}/>
+          <GitHubLogo color="white" className="h-8 w-auto hidden dark:block" />
+          <GitHubLogo color="default" className="h-8 w-auto block dark:hidden" />
         </a>
       </div>
       <div className="flex flex-col gap-7">
