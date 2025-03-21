@@ -1,4 +1,4 @@
-import TextIconCard from "@/components/TextIconCard";
+import Card from "@/components/Card";
 import {
   FileText,
   KeyRound,
@@ -87,33 +87,33 @@ const Home = () => (
             <TabsContent value="utilities">
               <CardMenu>
                 <Link href="/password-generator">
-                  <TextIconCard title="Password generator">
+                  <Card title="Password generator">
                     <KeyRound/>
-                  </TextIconCard>
+                  </Card>
                 </Link>
                 <Link href="/border-radius">
-                  <TextIconCard title="Border radius">
+                  <Card title="Border radius">
                     <Squircle/>
-                  </TextIconCard>
+                  </Card>
                 </Link>
                 <Link href="/to-do">
-                  <TextIconCard title="To-do list">
+                  <Card title="To-do list">
                     <ListChecks />
-                  </TextIconCard>
+                  </Card>
                 </Link>
               </CardMenu>
             </TabsContent>
             <TabsContent value="sandbox">
               <CardMenu>
                 <Link href="/macos-terminal-window">
-                  <TextIconCard title="MacOS terminal window">
+                  <Card title="MacOS terminal window">
                     <Terminal/>
-                  </TextIconCard>
+                  </Card>
                 </Link>
                 <Link href={"/get-post-jsonplaceholder"}>
-                  <TextIconCard title="Get post from jsonplaceholder API">
+                  <Card title="Get post from jsonplaceholder API">
                     <FileText/>
-                  </TextIconCard>
+                  </Card>
                 </Link>
               </CardMenu>
 
